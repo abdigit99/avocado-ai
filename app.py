@@ -225,9 +225,8 @@ def render_result(label: str, confidence: float) -> None:
 def render_model_missing() -> None:
     st.error(
         "**Model checkpoint not found.**\n\n"
-        f"Expected: `{MODEL_PATH.resolve()}`\n\n"
-        "Please run `python train.py` first to train and save the model, "
-        "then restart the app."
+        f"Expected: `{MODEL_PATH}`\n\n"
+        "Please ensure `avocado_model.pth` is uploaded to GitHub repo root."
     )
     st.stop()
 
